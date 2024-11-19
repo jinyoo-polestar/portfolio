@@ -1,0 +1,86 @@
+@use "variables" as *;
+
+@mixin mobile {
+  @media (max-width: #{$breakpoint-tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile-tablet {
+  @media (max-width: #{$breakpoint-desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
+
+@mixin work-item($color: #000, $highlight-color: #000, $background: #fff) {
+  justify-content: center;
+  align-items: center;
+  background-color: $background;
+  color: $color;
+
+  @include mobile-tablet {
+    position: relative;
+    flex-direction: column-reverse;
+  }
+
+  &__text-content {
+    width: 48%;
+
+    @include mobile-tablet {
+      width: 100%;
+    }
+  }
+
+  &__name {
+    font-size: 3.125rem;
+    color: $highlight-color;
+
+    @include mobile-tablet {
+      font-size: 1.875rem;
+    }
+  }
+
+  &__subtitle {
+    margin: 3.125rem 0 0.5rem 0;
+    font-size: 1.5rem;
+    color: $highlight-color;
+  }
+
+  &__text {
+    font-size: 1rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-left: 1rem;
+    word-break: keep-all;
+    font-size: 1rem;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__img-content {
+    width: 40%;
+
+    @include mobile-tablet {
+      width: 80%;
+      align-self: start;
+    }
+  }
+}

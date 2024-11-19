@@ -1,0 +1,39 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow-x: hidden;
+  font-family: "Pretendard";
+}
+
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+ul,
+ol,
+hr,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+b {
+  font-weight: 600;
+}
