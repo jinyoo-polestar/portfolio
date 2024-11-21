@@ -1,5 +1,6 @@
 @use "variables" as *;
 @use "mixin" as *;
+@use "font";
 
 %section-layout {
   display: flex;
@@ -466,47 +467,39 @@
   position: relative;
   justify-content: center;
   align-items: center;
-  gap: 5rem;
   background-color: $bright-gray;
 
-  @include mobile-tablet {
-    flex-direction: column;
-  }
-
-  &__text-en {
-    width: 35%;
-    font-family: serif, "Pretendard";
-    text-align: left;
-    font-size: 3.75rem;
-
-    @include mobile-tablet {
-      width: 100%;
-      text-align: center;
-    }
-  }
-
-  &__text-kr {
-    font-size: 2rem;
+  &__text {
+    font-size: 2.25rem;
+    line-height: 160%;
+    text-align: center;
+    word-break: keep-all;
     color: $dark-gray;
 
-    @include mobile-tablet {
+    @include tablet {
       font-size: 1.5rem;
-      text-align: center;
+    }
+
+    @include mobile {
+      font-size: 1.25rem;
     }
   }
 
   &__text-highlight {
+    font-weight: 600;
     color: $primary;
   }
 
   &__contact {
+    display: flex;
     position: absolute;
-    bottom: 5rem;
+    flex-direction: column;
+    bottom: 6rem;
     text-align: center;
 
     &-name {
-      margin-bottom: 0.5rem;
-      font-family: math, "Pretendard";
+      padding-bottom: 1rem;
+      font-family: "Playfair", "Pretendard";
       font-size: 2rem;
 
       @include mobile {
@@ -516,6 +509,8 @@
 
     &-item {
       font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.5rem;
     }
   }
 }

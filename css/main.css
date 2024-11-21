@@ -38,6 +38,70 @@ b {
   font-weight: 600;
 }
 
+@font-face {
+  font-family: "Pretendard";
+  src: url("/source/font/Pretendard-Thin.otf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("/source/font/Pretendard-ExtraLight.otf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("/source/font/Pretendard-Light.otf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("/source/font/Pretendard-Regular.otf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("/source/font/Pretendard-Medium.otf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("/source/font/Pretendard-SemiBold.otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("/source/font/Pretendard-Bold.otf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("/source/font/Pretendard-ExtraBold.otf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("/source/font/Pretendard-Black.otf");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Maruburi";
+  src: url("/source/font/MaruBuri-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Maruburi";
+  src: url("/source/font/MaruBuri-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Maruburi";
+  src: url("/source/font/MaruBuri-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Playfair";
+  src: url("/source/font/PlayfairDisplay-SemiBold.ttf");
+}
 .footer, .netflix-detail, .netflix, .work, .cover, .about, .profile, .intro {
   display: flex;
   width: 100vw;
@@ -591,47 +655,39 @@ b {
   position: relative;
   justify-content: center;
   align-items: center;
-  gap: 5rem;
   background-color: #f8f9fa;
 }
-@media (max-width: 1279px) {
-  .footer {
-    flex-direction: column;
-  }
-}
-.footer__text-en {
-  width: 35%;
-  font-family: serif, "Pretendard";
-  text-align: left;
-  font-size: 3.75rem;
-}
-@media (max-width: 1279px) {
-  .footer__text-en {
-    width: 100%;
-    text-align: center;
-  }
-}
-.footer__text-kr {
-  font-size: 2rem;
+.footer__text {
+  font-size: 2.25rem;
+  line-height: 160%;
+  text-align: center;
+  word-break: keep-all;
   color: #535353;
 }
-@media (max-width: 1279px) {
-  .footer__text-kr {
+@media (min-width: 900px) and (max-width: 1279px) {
+  .footer__text {
     font-size: 1.5rem;
-    text-align: center;
+  }
+}
+@media (max-width: 899px) {
+  .footer__text {
+    font-size: 1.25rem;
   }
 }
 .footer__text-highlight {
+  font-weight: 600;
   color: #1b6fff;
 }
 .footer__contact {
+  display: flex;
   position: absolute;
-  bottom: 5rem;
+  flex-direction: column;
+  bottom: 6rem;
   text-align: center;
 }
 .footer__contact-name {
-  margin-bottom: 0.5rem;
-  font-family: math, "Pretendard";
+  padding-bottom: 1rem;
+  font-family: "Playfair", "Pretendard";
   font-size: 2rem;
 }
 @media (max-width: 899px) {
@@ -641,4 +697,6 @@ b {
 }
 .footer__contact-item {
   font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5rem;
 }
