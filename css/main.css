@@ -38,6 +38,10 @@ b {
   font-weight: 600;
 }
 
+address {
+  font-style: unset;
+}
+
 @font-face {
   font-family: "Pretendard";
   src: url("/source/font/Pretendard-Thin.otf");
@@ -126,12 +130,13 @@ b {
   }
 }
 
-.profile__skill-title, .profile__experience-title {
+.profile__detail2-title, .profile__keyword-title, .profile__skill-title, .profile__edu-title {
+  margin-bottom: 1rem;
   font-size: 2rem;
   color: #1b6fff;
 }
 @media (max-width: 899px) {
-  .profile__skill-title, .profile__experience-title {
+  .profile__detail2-title, .profile__keyword-title, .profile__skill-title, .profile__edu-title {
     font-size: 1.5rem;
   }
 }
@@ -198,171 +203,151 @@ b {
   position: relative;
   flex-direction: column;
   border-bottom: 1px solid #f8f9fa;
-}
-@media (max-width: 1279px) {
-  .profile {
-    height: -moz-fit-content;
-    height: fit-content;
-    flex-direction: column;
-  }
+  height: auto;
 }
 .profile__layout {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
   margin-top: 4rem;
 }
 @media (max-width: 1279px) {
   .profile__layout {
-    flex-direction: column;
     margin-top: 1.5rem;
+    row-gap: unset;
   }
 }
-.profile__intro {
-  position: relative;
-  width: 49%;
-}
-@media (max-width: 1279px) {
-  .profile__intro {
-    width: 100%;
-  }
-}
-.profile__intro-title {
-  word-break: keep-all;
-  font-weight: 700;
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-}
-@media (max-width: 1279px) {
-  .profile__intro-title {
-    font-weight: 500;
-    font-size: 1.25rem;
-  }
-}
-.profile__intro-bg {
-  position: absolute;
-  top: -2rem;
-  left: -3rem;
-  opacity: 0.1;
-}
-@media (max-width: 1279px) {
-  .profile__intro-bg {
-    top: 0;
-    left: unset;
-    right: 0;
-  }
-}
-.profile__intro-subtitle {
+.profile__bio {
+  display: inline-flex;
+  flex-direction: column;
   font-size: 1rem;
+  font-weight: 200;
   color: #535353;
 }
-
-.profile__details {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 3rem;
-  margin-top: 2rem;
-}
 @media (max-width: 1279px) {
-  .profile__details {
-    gap: 1.5rem;
+  .profile__bio {
+    flex-direction: row;
+    align-items: flex-end;
   }
 }
-.profile__details-img {
+.profile__bio-img {
   height: 16rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+  border: 1px solid #535353;
 }
 @media (max-width: 1279px) {
-  .profile__details-img {
+  .profile__bio-img {
     height: 10rem;
   }
 }
-.profile__details-info {
-  text-align: left;
-}
 @media (max-width: 1279px) {
-  .profile__details-info {
-    word-break: keep-all;
-    font-size: 0.875rem;
+  .profile__bio-content {
+    margin-left: 2rem;
   }
 }
-.profile__details-name {
+.profile__bio-name {
+  margin: 1.5rem 0 2rem 0;
   font-size: 1.5rem;
+  font-weight: 600;
+  color: #1b6fff;
 }
 @media (max-width: 1279px) {
-  .profile__details-name {
+  .profile__bio-name {
+    margin: 1rem 0;
     font-size: 1.25rem;
   }
 }
-.profile__details-list {
-  display: inline-flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin: 1rem 0 0 1rem;
-}
 
 .profile__divider {
-  height: 100%;
-  color: #f8f9fa;
+  border-left: 1px dotted #f8f9fa;
 }
 @media (max-width: 1279px) {
   .profile__divider {
-    margin: 2rem 0;
+    width: 100%;
+    margin: 1.5rem 0;
+    border-left: unset;
+    border-bottom: 1px solid #f8f9fa;
   }
 }
 
-.profile__career {
-  margin-left: 5rem;
+.profile__detail1 {
+  display: inline-flex;
+  width: 35%;
+  flex-direction: column;
+  gap: 3rem;
 }
 @media (max-width: 1279px) {
-  .profile__career {
-    width: 100%;
-    margin-left: unset;
+  .profile__detail1 {
+    width: 80%;
   }
 }
 
-.profile__experience {
-  margin-bottom: 3rem;
-}
-.profile__experience-title {
-  margin-bottom: 1.5rem;
-}
-.profile__experience-name {
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-.profile__experience-date {
-  font-size: 0.75rem;
-  font-weight: 400;
+.profile__edu-item {
+  display: flex;
+  justify-content: space-between;
+  line-height: 160%;
   color: #535353;
 }
-.profile__experience-tasks {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  margin: 0.25rem 0 1.5rem 1.25rem;
-}
-@media (max-width: 1279px) {
-  .profile__experience-tasks {
-    font-size: 0.875rem;
-  }
-}
 
-.profile__skill-title {
-  margin-bottom: 1rem;
-}
-@media (max-width: 1279px) {
-  .profile__skill-title {
-    margin-bottom: 1.5rem;
-  }
-}
 .profile__skill-list {
   display: flex;
   flex-direction: row;
   gap: 1rem;
   flex-wrap: wrap;
   list-style: none;
+}
+
+.profile__keyword-item {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 1.875rem;
+  background-color: #f8f9fa;
+  color: #1b6fff;
+}
+
+@media (max-width: 1279px) {
+  .profile__detail2 {
+    width: 95%;
+  }
+}
+.profile__work {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+.profile__work-date {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #535353;
+}
+@media (max-width: 1279px) {
+  .profile__work-date {
+    font-size: 0.875rem;
+  }
+}
+.profile__work-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.profile__work-name {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.profile__work-intro {
+  font-size: 0.75rem;
+  color: #9d9d9d;
+}
+@media (max-width: 1279px) {
+  .profile__work-task {
+    font-size: 0.875rem;
+    font-weight: 300;
+  }
 }
 
 .about {
