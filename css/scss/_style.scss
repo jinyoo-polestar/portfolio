@@ -281,6 +281,8 @@
 .about {
   @extend %section-layout;
   flex-direction: column;
+  min-height: 100vh;
+  height: fit-content;
 
   @include mobile-tablet {
     height: fit-content;
@@ -303,21 +305,21 @@
       word-break: keep-all;
     }
   }
-}
 
-.about__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5rem 1.5rem;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem 1.5rem;
 
-  @include mobile-tablet {
-    gap: 3rem 0;
+    @include mobile-tablet {
+      gap: 3rem 0;
+    }
   }
 }
 
 .about__item {
   display: inline-flex;
-  width: 48%;
+  width: 47%;
   align-items: flex-start;
   gap: 1rem;
 
@@ -344,8 +346,9 @@
     margin-bottom: 0.75rem;
     padding: 0.5rem 1rem;
     background-color: $primary;
-    border-radius: 1.875rem;
+    border-radius: 2rem;
     font-size: 1.25rem;
+    font-weight: 400;
     color: $white;
 
     @include mobile-tablet {
@@ -354,12 +357,14 @@
   }
 
   &-subtitle {
+    width: 80%;
     word-break: keep-all;
     line-height: 1.25rem;
     font-size: 1rem;
     color: $dark-gray;
 
     @include mobile-tablet {
+      width: 90%;
       font-size: 0.875rem;
     }
   }

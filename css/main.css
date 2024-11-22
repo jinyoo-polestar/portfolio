@@ -352,6 +352,9 @@ address {
 
 .about {
   flex-direction: column;
+  min-height: 100vh;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 @media (max-width: 1279px) {
   .about {
@@ -373,7 +376,6 @@ address {
     word-break: keep-all;
   }
 }
-
 .about__list {
   display: flex;
   flex-wrap: wrap;
@@ -387,7 +389,7 @@ address {
 
 .about__item {
   display: inline-flex;
-  width: 48%;
+  width: 47%;
   align-items: flex-start;
   gap: 1rem;
 }
@@ -415,8 +417,9 @@ address {
   margin-bottom: 0.75rem;
   padding: 0.5rem 1rem;
   background-color: #1b6fff;
-  border-radius: 1.875rem;
+  border-radius: 2rem;
   font-size: 1.25rem;
+  font-weight: 400;
   color: #fff;
 }
 @media (max-width: 1279px) {
@@ -425,6 +428,7 @@ address {
   }
 }
 .about__item-subtitle {
+  width: 80%;
   word-break: keep-all;
   line-height: 1.25rem;
   font-size: 1rem;
@@ -432,6 +436,7 @@ address {
 }
 @media (max-width: 1279px) {
   .about__item-subtitle {
+    width: 90%;
     font-size: 0.875rem;
   }
 }
