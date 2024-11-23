@@ -485,6 +485,12 @@
   }
 }
 
+//detail-page
+.detail-page {
+  @extend %section-layout;
+  @include work-item($black, $black, $white);
+}
+
 //footer
 .footer {
   @extend %section-layout;

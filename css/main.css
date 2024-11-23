@@ -106,7 +106,7 @@ address {
   font-family: "Playfair";
   src: url("/source/font/PlayfairDisplay-SemiBold.ttf");
 }
-.footer, .netflix-detail, .netflix, .work, .cover, .about, .profile, .intro {
+.footer, .detail-page, .netflix-detail, .netflix, .work, .cover, .about, .profile, .intro {
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -115,7 +115,7 @@ address {
   box-sizing: border-box;
 }
 @media (max-width: 899px) {
-  .footer, .netflix-detail, .netflix, .work, .cover, .about, .profile, .intro {
+  .footer, .detail-page, .netflix-detail, .netflix, .work, .cover, .about, .profile, .intro {
     padding: 2rem 1.25rem;
   }
 }
@@ -464,27 +464,33 @@ address {
 }
 
 .work {
-  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
   align-items: center;
-  background-color: #fff7fa;
   color: #000;
 }
 @media (max-width: 1279px) {
   .work {
-    position: relative;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 3rem;
   }
 }
 .work__text-content {
-  width: 48%;
+  width: 40%;
 }
 @media (max-width: 1279px) {
   .work__text-content {
-    width: 100%;
+    width: 95%;
   }
 }
+.work__emoji {
+  font-size: 4.8rem;
+}
 .work__name {
-  font-size: 3.125rem;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
   color: #e44178;
 }
 @media (max-width: 1279px) {
@@ -510,16 +516,29 @@ address {
   word-break: keep-all;
   font-size: 1rem;
 }
-.work__img {
-  width: 100%;
-}
 .work__img-content {
+  display: flex;
   width: 50%;
+  height: 100vh;
+  gap: 2rem;
 }
 @media (max-width: 1279px) {
   .work__img-content {
-    width: 80%;
-    align-self: start;
+    width: 95%;
+    gap: unset;
+    justify-content: space-between;
+  }
+}
+.work__img {
+  width: 100%;
+}
+@media (max-width: 1279px) {
+  .work__img {
+    width: 30%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
   }
 }
 @media (max-width: 1279px) {
@@ -530,27 +549,33 @@ address {
 }
 
 .netflix {
-  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
   align-items: center;
-  background-color: #000;
   color: #fff;
 }
 @media (max-width: 1279px) {
   .netflix {
-    position: relative;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 3rem;
   }
 }
 .netflix__text-content {
-  width: 48%;
+  width: 40%;
 }
 @media (max-width: 1279px) {
   .netflix__text-content {
-    width: 100%;
+    width: 95%;
   }
 }
+.netflix__emoji {
+  font-size: 4.8rem;
+}
 .netflix__name {
-  font-size: 3.125rem;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
   color: #e50914;
 }
 @media (max-width: 1279px) {
@@ -576,16 +601,29 @@ address {
   word-break: keep-all;
   font-size: 1rem;
 }
-.netflix__img {
-  width: 100%;
-}
 .netflix__img-content {
+  display: flex;
   width: 50%;
+  height: 100vh;
+  gap: 2rem;
 }
 @media (max-width: 1279px) {
   .netflix__img-content {
-    width: 80%;
-    align-self: start;
+    width: 95%;
+    gap: unset;
+    justify-content: space-between;
+  }
+}
+.netflix__img {
+  width: 100%;
+}
+@media (max-width: 1279px) {
+  .netflix__img {
+    width: 30%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
   }
 }
 .netflix__btn-content {
@@ -652,6 +690,85 @@ address {
 .netflix-detail__text {
   margin-top: 1rem;
   line-height: 1.25rem;
+}
+
+.detail-page {
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+}
+@media (max-width: 1279px) {
+  .detail-page {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 3rem;
+  }
+}
+.detail-page__text-content {
+  width: 40%;
+}
+@media (max-width: 1279px) {
+  .detail-page__text-content {
+    width: 95%;
+  }
+}
+.detail-page__emoji {
+  font-size: 4.8rem;
+}
+.detail-page__name {
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  color: #000;
+}
+@media (max-width: 1279px) {
+  .detail-page__name {
+    font-size: 1.875rem;
+  }
+}
+.detail-page__subtitle {
+  margin: 3.125rem 0 0.5rem 0;
+  font-family: "Maruburi", "Pretendard";
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #000;
+}
+.detail-page__text {
+  font-size: 1rem;
+}
+.detail-page__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-left: 1rem;
+  word-break: keep-all;
+  font-size: 1rem;
+}
+.detail-page__img-content {
+  display: flex;
+  width: 50%;
+  height: 100vh;
+  gap: 2rem;
+}
+@media (max-width: 1279px) {
+  .detail-page__img-content {
+    width: 95%;
+    gap: unset;
+    justify-content: space-between;
+  }
+}
+.detail-page__img {
+  width: 100%;
+}
+@media (max-width: 1279px) {
+  .detail-page__img {
+    width: 30%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
+  }
 }
 
 .footer {
