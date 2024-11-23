@@ -29,12 +29,14 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  background-color: $background;
   color: $color;
 
   @include mobile-tablet {
     flex-direction: column;
     justify-content: flex-start;
     gap: 3rem;
+    overflow-y: hidden;
   }
 
   &__text-content {

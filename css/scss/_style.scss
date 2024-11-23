@@ -442,6 +442,14 @@
   &__ic-github {
     background-image: url("/source/icon/ic_github.svg");
   }
+
+  &__img {
+    object-fit: contain;
+
+    @include mobile-tablet {
+      width: 90%;
+    }
+  }
 }
 
 //netflix-detail
