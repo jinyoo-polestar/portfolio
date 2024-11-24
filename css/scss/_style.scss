@@ -398,9 +398,23 @@
 //work
 .work {
   @extend %section-layout;
-  @include work-item(#000, #e44178, #fff7fa);
+  @include work-item(#000, #fc2d7c, #fff);
   @include mobile-tablet {
     height: fit-content;
+  }
+
+  &__img-content {
+    @include mobile-tablet {
+      height: fit-content;
+    }
+  }
+
+  &__img {
+    object-fit: contain;
+    object-position: center;
+    @include mobile-tablet {
+      object-position: top;
+    }
   }
 }
 
@@ -443,11 +457,17 @@
     background-image: url("/source/icon/ic_github.svg");
   }
 
+  &__img-content {
+    @include mobile-tablet {
+      height: fit-content;
+    }
+  }
+
   &__img {
     object-fit: contain;
-
+    object-position: center;
     @include mobile-tablet {
-      width: 90%;
+      object-position: top;
     }
   }
 }
@@ -497,6 +517,14 @@
 .detail-page {
   @extend %section-layout;
   @include work-item($black, $black, $white);
+
+  &__img {
+    cursor: pointer;
+
+    @include mobile-tablet {
+      width: 30%;
+    }
+  }
 }
 
 //footer

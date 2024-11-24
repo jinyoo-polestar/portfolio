@@ -77,9 +77,23 @@
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
-    margin-left: 1rem;
+    margin: 1rem 0 0 1rem;
     word-break: keep-all;
     font-size: 1rem;
+  }
+
+  &__skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  &__skill {
+    height: 2rem;
+
+    img {
+      height: 100%;
+    }
   }
 
   &__img-content {
@@ -97,11 +111,11 @@
 
   &__img {
     width: 100%;
+    object-fit: cover;
+    object-position: top;
 
     @include mobile-tablet {
-      width: 30%;
-      object-fit: cover;
-      object-position: top;
+      width: 50%;
     }
   }
 }
