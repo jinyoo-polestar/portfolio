@@ -25,26 +25,36 @@
 }
 
 @mixin work-item($color: #000, $highlight-color: #000, $background: #fff) {
-  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
   align-items: center;
   background-color: $background;
   color: $color;
 
   @include mobile-tablet {
-    position: relative;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 3rem;
+    overflow-y: hidden;
   }
 
   &__text-content {
-    width: 48%;
+    width: 40%;
 
     @include mobile-tablet {
-      width: 100%;
+      width: 95%;
     }
   }
 
+  &__emoji {
+    font-size: 4.8rem;
+  }
+
   &__name {
-    font-size: 3.125rem;
+    margin-bottom: 1.5rem;
+    font-family: "Nanumsquare", "Pretendard";
+    font-size: 2.5rem;
     color: $highlight-color;
 
     @include mobile-tablet {
@@ -54,7 +64,7 @@
 
   &__subtitle {
     margin: 3.125rem 0 0.5rem 0;
-    font-family: "Maruburi", "Pretendard";
+    font-family: "Crimson", "Pretendard";
     font-weight: 800;
     font-size: 1.5rem;
     color: $highlight-color;
@@ -68,21 +78,45 @@
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
-    margin-left: 1rem;
+    margin: 1rem 0 0 1rem;
     word-break: keep-all;
     font-size: 1rem;
   }
 
-  &__img {
-    width: 100%;
+  &__skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  &__skill {
+    height: 2rem;
+
+    img {
+      height: 100%;
+    }
   }
 
   &__img-content {
+    display: flex;
     width: 50%;
+    height: 100vh;
+    gap: 2rem;
 
     @include mobile-tablet {
-      width: 80%;
-      align-self: start;
+      width: 95%;
+      gap: unset;
+      justify-content: space-between;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+
+    @include mobile-tablet {
+      width: 50%;
     }
   }
 }
