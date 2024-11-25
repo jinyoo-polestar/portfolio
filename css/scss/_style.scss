@@ -486,6 +486,64 @@
   }
 }
 
+//netflix-learn
+.netflix-learn {
+  @extend %section-layout;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: $black;
+  border-top: 1px solid $bright-gray;
+  color: $white;
+
+  &__title {
+    @extend %section-title;
+    color: #e50914;
+  }
+
+  &__content-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 3rem;
+  }
+
+  &__content {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    gap: 1rem;
+  }
+
+  &__ic {
+    display: flex;
+    width: 8rem;
+    height: 8rem;
+    justify-content: center;
+    align-items: center;
+    border: 2px dotted $white;
+    border-radius: 50%;
+  }
+
+  &__img {
+    width: 50%;
+  }
+
+  &__subtitle {
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+    background-color: $white;
+    font-size: 1.5rem;
+    color: $black;
+  }
+
+  &__text {
+    margin-bottom: 0.75rem;
+    line-height: 1.5rem;
+    word-break: keep-all;
+  }
+}
+
 //matzipdler
 .matzipdler {
   @extend %section-layout;
