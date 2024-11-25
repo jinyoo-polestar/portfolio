@@ -472,47 +472,6 @@
   }
 }
 
-//netflix-detail
-.netflix-detail {
-  @extend %section-layout;
-  flex-direction: column;
-  justify-content: unset;
-  align-items: unset;
-  background-color: $black;
-  border-top: 1px solid $dark-gray;
-  color: $white;
-
-  @include mobile-tablet {
-    height: fit-content;
-  }
-
-  &__title {
-    margin-bottom: 2rem;
-    font-size: 1.5rem;
-    color: #e50914;
-  }
-
-  &__list {
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
-
-    @include mobile-tablet {
-      flex-direction: column;
-    }
-  }
-
-  &__item-name {
-    margin-bottom: 1rem;
-    font-size: 1.375rem;
-  }
-
-  &__text {
-    margin-top: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
 //detail-page
 .detail-page {
   @extend %section-layout;
@@ -523,6 +482,29 @@
 
     @include mobile-tablet {
       width: 30%;
+    }
+  }
+}
+
+//matzipdler
+.matzipdler {
+  @extend %section-layout;
+  @include work-item($black, $white, #ffc23f);
+
+  &__img-content {
+    @include mobile-tablet {
+      height: fit-content;
+    }
+  }
+
+  &__img {
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+
+    @include mobile-tablet {
+      width: 40%;
+      object-position: top;
     }
   }
 }

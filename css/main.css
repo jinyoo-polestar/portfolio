@@ -88,25 +88,14 @@ address {
   font-weight: 900;
 }
 @font-face {
-  font-family: "Maruburi";
-  src: url("/source/font/MaruBuri-Regular.ttf");
-  font-weight: 400;
+  font-family: "Crimson";
+  src: url("/source/font/CrimsonText-SemiBold.ttf");
 }
 @font-face {
-  font-family: "Maruburi";
-  src: url("/source/font/MaruBuri-SemiBold.ttf");
-  font-weight: 600;
+  font-family: "Nanumsquare";
+  src: url("/source/font/NanumSquareB.otf");
 }
-@font-face {
-  font-family: "Maruburi";
-  src: url("/source/font/MaruBuri-Bold.ttf");
-  font-weight: 700;
-}
-@font-face {
-  font-family: "Playfair";
-  src: url("/source/font/PlayfairDisplay-SemiBold.ttf");
-}
-.footer, .detail-page, .netflix-detail, .netflix, .work, .cover, .about, .profile, .intro {
+.footer, .matzipdler, .detail-page, .netflix, .work, .cover, .about, .profile, .intro {
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -115,7 +104,7 @@ address {
   box-sizing: border-box;
 }
 @media (max-width: 899px) {
-  .footer, .detail-page, .netflix-detail, .netflix, .work, .cover, .about, .profile, .intro {
+  .footer, .matzipdler, .detail-page, .netflix, .work, .cover, .about, .profile, .intro {
     padding: 2rem 1.25rem;
   }
 }
@@ -492,6 +481,7 @@ address {
 }
 .work__name {
   margin-bottom: 1.5rem;
+  font-family: "Nanumsquare", "Pretendard";
   font-size: 2.5rem;
   color: #fc2d7c;
 }
@@ -502,7 +492,7 @@ address {
 }
 .work__subtitle {
   margin: 3.125rem 0 0.5rem 0;
-  font-family: "Maruburi", "Pretendard";
+  font-family: "Crimson", "Pretendard";
   font-weight: 800;
   font-size: 1.5rem;
   color: #fc2d7c;
@@ -608,6 +598,7 @@ address {
 }
 .netflix__name {
   margin-bottom: 1.5rem;
+  font-family: "Nanumsquare", "Pretendard";
   font-size: 2.5rem;
   color: #e50914;
 }
@@ -618,7 +609,7 @@ address {
 }
 .netflix__subtitle {
   margin: 3.125rem 0 0.5rem 0;
-  font-family: "Maruburi", "Pretendard";
+  font-family: "Crimson", "Pretendard";
   font-weight: 800;
   font-size: 1.5rem;
   color: #e50914;
@@ -716,44 +707,6 @@ address {
   }
 }
 
-.netflix-detail {
-  flex-direction: column;
-  justify-content: unset;
-  align-items: unset;
-  background-color: #000;
-  border-top: 1px solid #535353;
-  color: #fff;
-}
-@media (max-width: 1279px) {
-  .netflix-detail {
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-}
-.netflix-detail__title {
-  margin-bottom: 2rem;
-  font-size: 1.5rem;
-  color: #e50914;
-}
-.netflix-detail__list {
-  display: flex;
-  flex-direction: row;
-  gap: 3rem;
-}
-@media (max-width: 1279px) {
-  .netflix-detail__list {
-    flex-direction: column;
-  }
-}
-.netflix-detail__item-name {
-  margin-bottom: 1rem;
-  font-size: 1.375rem;
-}
-.netflix-detail__text {
-  margin-top: 1rem;
-  line-height: 1.25rem;
-}
-
 .detail-page {
   flex-direction: row;
   width: 100%;
@@ -783,6 +736,7 @@ address {
 }
 .detail-page__name {
   margin-bottom: 1.5rem;
+  font-family: "Nanumsquare", "Pretendard";
   font-size: 2.5rem;
   color: #000;
 }
@@ -793,7 +747,7 @@ address {
 }
 .detail-page__subtitle {
   margin: 3.125rem 0 0.5rem 0;
-  font-family: "Maruburi", "Pretendard";
+  font-family: "Crimson", "Pretendard";
   font-weight: 800;
   font-size: 1.5rem;
   color: #000;
@@ -851,6 +805,119 @@ address {
 @media (max-width: 1279px) {
   .detail-page__img {
     width: 30%;
+  }
+}
+
+.matzipdler {
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffc23f;
+  color: #000;
+}
+@media (max-width: 1279px) {
+  .matzipdler {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 3rem;
+    overflow-y: hidden;
+  }
+}
+.matzipdler__text-content {
+  width: 40%;
+}
+@media (max-width: 1279px) {
+  .matzipdler__text-content {
+    width: 95%;
+  }
+}
+.matzipdler__emoji {
+  font-size: 4.8rem;
+}
+.matzipdler__name {
+  margin-bottom: 1.5rem;
+  font-family: "Nanumsquare", "Pretendard";
+  font-size: 2.5rem;
+  color: #fff;
+}
+@media (max-width: 1279px) {
+  .matzipdler__name {
+    font-size: 1.875rem;
+  }
+}
+.matzipdler__subtitle {
+  margin: 3.125rem 0 0.5rem 0;
+  font-family: "Crimson", "Pretendard";
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.matzipdler__text {
+  font-size: 1rem;
+}
+.matzipdler__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 1rem 0 0 1rem;
+  word-break: keep-all;
+  font-size: 1rem;
+}
+.matzipdler__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+.matzipdler__skill {
+  height: 2rem;
+}
+.matzipdler__skill img {
+  height: 100%;
+}
+.matzipdler__img-content {
+  display: flex;
+  width: 50%;
+  height: 100vh;
+  gap: 2rem;
+}
+@media (max-width: 1279px) {
+  .matzipdler__img-content {
+    width: 95%;
+    gap: unset;
+    justify-content: space-between;
+  }
+}
+.matzipdler__img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+@media (max-width: 1279px) {
+  .matzipdler__img {
+    width: 50%;
+  }
+}
+@media (max-width: 1279px) {
+  .matzipdler__img-content {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+.matzipdler__img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+}
+@media (max-width: 1279px) {
+  .matzipdler__img {
+    width: 40%;
+    -o-object-position: top;
+       object-position: top;
   }
 }
 

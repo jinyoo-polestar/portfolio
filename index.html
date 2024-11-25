@@ -365,75 +365,44 @@
         />
       </div>
     </section>
-    <section class="netflix-detail">
-      <h4 class="netflix-detail__title">How to make</h4>
-      <div class="netflix-detail__list">
-        <div class="netflix-detail__item">
-          <h5 class="netflix-detail__item-name">➊ BEM 방법론 적용</h5>
-          <div>
-            <img src="/source/image/img_netflix_01.png" />
+    <section class="matzipdler">
+      <article class="matzipdler__text-content">
+        <p class="matzipdler__emoji">🍽️</p>
+        <h3 class="matzipdler__name">맛집들러</h3>
+        <ul class="matzipdler__list">
+          <li class="matzipdler__item">
+            작업내용 : 기획/디자인/퍼블리싱(기여도 100%)
+          </li>
+          <li class="matzipdler__item">작업기간 : 3주</li>
+        </ul>
+        <h4 class="matzipdler__subtitle">Overview</h4>
+        <p class="matzipdler__text">
+          점심시간마다 뭐 먹을지 고민을 하는 회사 팀원들을 위해, 개발팀 동료와
+          함께 회사 근처 맛집 추천 사이트를 토이 프로젝트로 제작했습니다. 기획,
+          디자인, 퍼블리싱, 데이터 수집을 맡아 진행했습니다.
+        </p>
+        <h4 class="matzipdler__subtitle">Skill</h4>
+        <article class="matzipdler__skills">
+          <div class="matzipdler__skill">
+            <img src="/source/icon/logo_html.svg" />
           </div>
-          <p class="netflix-detail__text">
-            BEM 방법론을 사용해 유지보수와 관리가 편리한 구조로 설계했습니다.
-            <br />
-            소규모 프로젝트라 BEM을 사용하지 않는게 더 간편할 수도 있었지만,<br />
-            협업 시 코드 가독성을 높이고 일관성 있는 관리가 중요할 것이라고
-            생각되어 BEM 방식을 선택했습니다.
-          </p>
-          <p class="netflix-detail__text">
-            [구현 방식]<br />
-            - 클래스 이름 첫 부분에 섹션명을 명시해, 클래스만 보고도 어디에
-            위치해있는지 쉽게 알 수 있도록 했습니다.<br />
-            - 클래스 명이 지나치게 길어지지 않도록, 섹션별로 블록을 명확히
-            구분해 관리했습니다.<br />
-            - 주요 요소에 대해 공통된 네이밍 규칙을 적용해 코드 일관성을
-            유지했습니다. 제목-title, 소제목- subtitle, 버튼-btn, 아이콘-ic
-          </p>
-        </div>
-        <div class="netflix-detail__item">
-          <h5 class="netflix-detail__item-name">
-            ➋ Javascript를 이용한 input label 디자인
-          </h5>
-          <div>
-            <img src="/source/image/img_netflix_02.png" />
+          <div class="matzipdler__skill">
+            <img src="/source/icon/logo_css.svg" />
           </div>
-          <p class="netflix-detail__text">
-            넷플릭스의 인풋 라벨은 입력값이 비어있지 않을 때 라벨의 위치와
-            사이즈가 작아지는 디자인이 적용되어 있었습니다.<br />
-            기존에는 UI 프레임워크를 이용해 간단히 구현할 수 있었지만,<br />
-            이번 프로젝트에서는 직접 만들어보았습니다.
-          </p>
-          <p class="netflix-detail__text">
-            [구현 방식]<br />
-            - input 요소에 focus가 될 때 active 클래스를 추가해 라벨의 위치와
-            크기 조절<br />
-            - input 요소가 blur 되면 입력값 확인 후 값이 없으면 active 클래스
-            삭제 와 같은 형식으로 만들었습니다.
-          </p>
-        </div>
-        <div class="netflix-detail__item">
-          <h5 class="netflix-detail__item-name">
-            ➌ Javascript를 이용한 slider 구현
-          </h5>
-          <div>
-            <img src="/source/image/img_netflix_03.png" />
+          <div class="matzipdler__skill">
+            <img src="/source/icon/logo_javascript.svg" />
           </div>
-          <p class="netflix-detail__text">
-            영화 리스트는 슬라이더 형태로 구성되어 있으며,<br />
-            오른쪽에 영화가 남아있을 경우 [>] 버튼이 나타나 클릭 시 우측으로
-            이동<br />
-            왼쪽에 영화가 있을 경우 [<] 버튼이 나타나 클릭 시 좌측으로 이동
-          </p>
-          <p class="netflix-detail__text">
-            [구현 방식]<br />
-            - 버튼 모두 기본 display:none 설정<br />
-            - 좌측 버튼 클릭하면 슬라이더래퍼 길이만큼 좌측으로 이동<br />
-            - 우측 버튼 클릭하면 슬라이더래퍼 길이만큼 우측으로 이동<br />
-            (*이때 슬라이더래퍼의 길이보다 스크롤 길이가 더 적을 경우 스크롤
-            길이만큼 이동)
-          </p>
-        </div>
-      </div>
+          <div class="matzipdler__skill">
+            <img src="/source/icon/logo_react.svg" />
+          </div>
+        </article>
+      </article>
+      <div class="matzipdler__img-content">
+        <img
+          src="/source/image/img_matzipdler_mockup.png"
+          alt=""
+          class="matzipdler__img"
+        />
     </section>
     <footer class="footer">
       <div class="footer__text">
