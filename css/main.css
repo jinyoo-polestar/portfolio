@@ -800,7 +800,7 @@ address {
   }
 }
 .detail-page__img {
-  cursor: pointer;
+  cursor: url("/source/icon/ic_click_primary.svg"), pointer;
 }
 @media (max-width: 1279px) {
   .detail-page__img {

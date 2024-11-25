@@ -478,7 +478,7 @@
   @include work-item($black, $black, $white);
 
   &__img {
-    cursor: pointer;
+    cursor: url("/source/icon/ic_click_primary.svg"), pointer;
 
     @include mobile-tablet {
       width: 30%;
