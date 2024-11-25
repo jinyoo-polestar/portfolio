@@ -520,7 +520,7 @@
 
   &__line {
     position: absolute;
-    top: 1rem;
+    top: 1.5rem;
     width: 100%;
     border-bottom: 1px solid $primary;
     z-index: -1;
@@ -530,6 +530,24 @@
       height: 100%;
       left: 1.125rem;
       border-left: 1px solid $primary;
+    }
+  }
+
+  &__ic {
+    display: inline-flex;
+    width: 3.25rem;
+    height: 3.25rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: $primary;
+    font-size: 1.5rem;
+    color: $white;
+
+    @include mobile-tablet {
+      width: 2.5rem;
+      height: 2.5rem;
+      font-size: 1.25rem;
     }
   }
 
@@ -550,7 +568,7 @@
 
     @include mobile-tablet {
       position: relative;
-      left: 3rem;
+      left: 3.5rem;
       bottom: 3rem;
       font-size: 1.25rem;
     }
@@ -563,7 +581,7 @@
 
     @include mobile-tablet {
       position: relative;
-      left: 3rem;
+      left: 3.5rem;
       bottom: 3rem;
     }
   }

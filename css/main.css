@@ -929,7 +929,7 @@ address {
 }
 .about-process__line {
   position: absolute;
-  top: 1rem;
+  top: 1.5rem;
   width: 100%;
   border-bottom: 1px solid #1b6fff;
   z-index: -1;
@@ -940,6 +940,24 @@ address {
     height: 100%;
     left: 1.125rem;
     border-left: 1px solid #1b6fff;
+  }
+}
+.about-process__ic {
+  display: inline-flex;
+  width: 3.25rem;
+  height: 3.25rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #1b6fff;
+  font-size: 1.5rem;
+  color: #fff;
+}
+@media (max-width: 1279px) {
+  .about-process__ic {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
   }
 }
 .about-process__item {
@@ -960,7 +978,7 @@ address {
 @media (max-width: 1279px) {
   .about-process__name {
     position: relative;
-    left: 3rem;
+    left: 3.5rem;
     bottom: 3rem;
     font-size: 1.25rem;
   }
@@ -973,7 +991,7 @@ address {
 @media (max-width: 1279px) {
   .about-process__text {
     position: relative;
-    left: 3rem;
+    left: 3.5rem;
     bottom: 3rem;
   }
 }
