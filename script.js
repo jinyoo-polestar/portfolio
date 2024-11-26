@@ -36,4 +36,20 @@ $(function () {
       start: "top top",
     }
   );
+
+  $(".intro__bg").animate(
+    {
+      width: "100%",
+    },
+    {
+      duration: 1000,
+      easing: "swing",
+      step: function (now) {
+        if (now > 0) {
+          $(".intro__bg").css("overflow", "unset");
+        }
+      },
+      complete: function () {},
+    }
+  );
 });
