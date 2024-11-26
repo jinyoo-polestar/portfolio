@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100vw;
   height: 100vh;
@@ -131,8 +135,10 @@ address {
 }
 
 .intro {
+  position: relative;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   background-color: #f8f9fa;
 }
 .intro__layout {
@@ -141,12 +147,12 @@ address {
   width: 60%;
   align-items: center;
   justify-content: center;
-  gap: 4.5rem 1.5rem;
+  gap: 3rem;
 }
 @media (max-width: 1279px) {
   .intro__layout {
     width: 100%;
-    gap: 2.5rem 1rem;
+    gap: 2.5rem;
   }
 }
 .intro__folders {
@@ -154,7 +160,8 @@ address {
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
-  height: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
   gap: 3rem;
   padding: 1rem 1.5rem 1.5rem;
   z-index: 2;
@@ -222,6 +229,28 @@ address {
   .intro__text--highlight {
     font-size: 2rem;
   }
+}
+.intro__scroll {
+  position: absolute;
+  bottom: 3rem;
+  opacity: 0.5;
+}
+@media (max-width: 1279px) {
+  .intro__scroll {
+    bottom: 1rem;
+  }
+}
+.intro__totop-btn {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  padding: 1rem;
+  border-radius: 50%;
+  border: 1px solid #f8f9fa;
+  background-color: #fff;
+  box-shadow: 1px 2px 8px rgba(8, 8, 8, 0.168627451);
+  cursor: pointer;
+  z-index: 10;
 }
 
 .profile {
@@ -756,6 +785,7 @@ address {
 @media (max-width: 1279px) {
   .netflix-learn__content-layout {
     flex-direction: column;
+    gap: 3rem;
   }
 }
 .netflix-learn__content {

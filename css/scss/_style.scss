@@ -37,8 +37,10 @@
 //intro
 .intro {
   @extend %section-layout;
+  position: relative;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   background-color: $bright-gray;
 
   &__layout {
@@ -47,11 +49,11 @@
     width: 60%;
     align-items: center;
     justify-content: center;
-    gap: 4.5rem 1.5rem;
+    gap: 3rem;
 
     @include mobile-tablet {
       width: 100%;
-      gap: 2.5rem 1rem;
+      gap: 2.5rem;
     }
   }
 
@@ -59,7 +61,7 @@
     display: flex;
     position: relative;
     width: fit-content;
-    height: 100%;
+    height: fit-content;
     gap: 3rem;
     padding: 1rem 1.5rem 1.5rem;
     z-index: 2;
@@ -130,6 +132,29 @@
     @include mobile-tablet {
       font-size: 2rem;
     }
+  }
+
+  &__scroll {
+    position: absolute;
+    bottom: 3rem;
+    opacity: 0.5;
+
+    @include mobile-tablet {
+      bottom: 1rem;
+    }
+  }
+
+  &__totop-btn {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    padding: 1rem;
+    border-radius: 50%;
+    border: 1px solid $bright-gray;
+    background-color: $white;
+    box-shadow: 1px 2px 8px #0808082b;
+    cursor: pointer;
+    z-index: 10;
   }
 }
 
@@ -433,6 +458,7 @@
 
     @include mobile-tablet {
       flex-direction: column;
+      gap: 3rem;
     }
   }
 
