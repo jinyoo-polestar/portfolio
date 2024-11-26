@@ -37,8 +37,10 @@
 //intro
 .intro {
   @extend %section-layout;
+  position: relative;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   background-color: $bright-gray;
 
   &__layout {
@@ -47,50 +49,112 @@
     width: 60%;
     align-items: center;
     justify-content: center;
-    gap: 4.5rem 1.5rem;
-    font-size: 3.125rem;
+    gap: 3rem;
 
     @include mobile-tablet {
-      width: 80%;
-      gap: 2.5rem 1rem;
+      width: 100%;
+      gap: 2.5rem;
+    }
+  }
+
+  &__folders {
+    display: flex;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    gap: 3rem;
+    padding: 1rem 1.5rem 1.5rem;
+    z-index: 2;
+
+    @include mobile-tablet {
+      width: 100%;
+      flex-wrap: wrap;
+      padding: 1rem;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: rgba(208, 204, 204, 60%);
+    border: 1px dotted #9d9d9d;
+  }
+
+  &__cursor {
+    position: absolute;
+    right: -1.5rem;
+    bottom: -3.5rem;
+    z-index: 5;
+  }
+
+  &__folder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include mobile-tablet {
+      width: 40%;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__folder-name {
+    max-width: 110%;
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  &__text {
+    font-weight: 100;
+    font-size: 2.5rem;
+    text-align: center;
+
+    @include mobile-tablet {
+      font-size: 0.75rem;
+    }
+  }
+
+  &__text--highlight {
+    font-family: "Nanumsquare";
+    font-weight: 700;
+    font-size: 3.25rem;
+
+    @include mobile-tablet {
       font-size: 2rem;
     }
   }
 
-  &__keyword {
-    position: relative;
-    background-color: $white;
-    padding: 1rem 2rem;
-    border: 1px solid #ababab;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 16px rgba(44, 44, 44, 0.25);
-    font-size: 3.5rem;
-    font-weight: 600;
+  &__scroll {
+    position: absolute;
+    bottom: 3rem;
+    opacity: 0.5;
 
     @include mobile-tablet {
-      padding: 0.5rem 1rem;
-      font-size: 2rem;
+      bottom: 1rem;
     }
+  }
 
-    &::after {
-      content: "";
-      position: absolute;
-      background-image: url("/source/icon/ic_check_primary.svg");
-      background-color: white;
-      right: -1.5rem;
-      top: -1.5rem;
-      width: 3.05rem;
-      height: 3.05rem;
-      border-radius: 50%;
-
-      @include mobile-tablet {
-        background-size: 1.75rem;
-        right: -0.85rem;
-        top: -0.85rem;
-        width: 1.75rem;
-        height: 1.75rem;
-      }
-    }
+  &__totop-btn {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    padding: 1rem;
+    border-radius: 50%;
+    border: 1px solid $bright-gray;
+    background-color: $white;
+    box-shadow: 1px 2px 8px #0808082b;
+    cursor: pointer;
+    z-index: 10;
   }
 }
 
@@ -394,6 +458,7 @@
 
     @include mobile-tablet {
       flex-direction: column;
+      gap: 3rem;
     }
   }
 
