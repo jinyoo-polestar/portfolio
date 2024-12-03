@@ -37,18 +37,15 @@
 //intro
 .intro {
   @extend %section-layout;
-  position: relative;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
   background-color: $bright-gray;
 
   &__layout {
     display: flex;
-    flex-wrap: wrap;
     width: 60%;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 3rem;
 
     @include mobile-tablet {
@@ -68,19 +65,19 @@
 
     @include mobile-tablet {
       width: 100%;
-      flex-wrap: wrap;
-      padding: 1rem;
       justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
+      padding: 1rem;
     }
   }
 
   &__bg {
     position: absolute;
-    width: 20%;
-    height: 100%;
     top: 0;
     left: 0;
+    width: 20%;
+    height: 100%;
     z-index: -1;
     background-color: rgba(208, 204, 204, 60%);
     border: 1px dotted #9d9d9d;
@@ -90,7 +87,7 @@
     position: absolute;
     right: -1.5rem;
     bottom: -3.5rem;
-    z-index: 5;
+    z-index: 2;
   }
 
   &__folder {
@@ -108,7 +105,7 @@
     width: 100%;
   }
 
-  &__folder-name {
+  &__name {
     max-width: 110%;
     font-size: 1.25rem;
     font-weight: 500;
@@ -134,7 +131,7 @@
     }
   }
 
-  &__scroll {
+  &__scroll-guide {
     position: absolute;
     bottom: 3rem;
     opacity: 0.5;
@@ -162,17 +159,18 @@
 .profile {
   @extend %section-layout;
   position: relative;
+  height: auto;
+  min-height: 100vh;
   flex-direction: column;
   border-bottom: 1px solid $bright-gray;
-  height: auto;
 
   &__layout {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 1.5rem;
+    flex-wrap: wrap;
     margin-top: 4rem;
+    gap: 1.5rem;
 
     @include mobile-tablet {
       margin-top: 1.5rem;
@@ -223,6 +221,12 @@
       margin: 1rem 0;
       font-size: 1.25rem;
     }
+  }
+
+  &-phone,
+  &-email {
+    display: block;
+    margin-top: 0.5rem;
   }
 }
 
@@ -308,6 +312,7 @@
   gap: 1rem;
 
   &-date {
+    min-width: 8.125rem;
     font-size: 1rem;
     font-weight: 300;
     color: $dark-gray;
@@ -333,7 +338,13 @@
     color: #9d9d9d;
   }
 
+  &-tasks {
+    margin-left: 1rem;
+  }
+
   &-task {
+    padding-top: 0.25rem;
+
     @include mobile-tablet {
       font-size: 0.875rem;
       font-weight: 300;
@@ -424,7 +435,12 @@
   @include work-item($black, $black, $white);
 
   &__img {
+    position: relative;
     cursor: url("/source/icon/ic_click_primary.svg"), pointer;
+
+    &:hover {
+      opacity: 0.5;
+    }
 
     @include mobile-tablet {
       width: 30%;
