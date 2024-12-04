@@ -834,6 +834,7 @@ address {
 @media (max-width: 1279px) {
   .netflix-learn__content {
     width: 100%;
+    align-items: flex-start;
     gap: 1rem;
     word-break: keep-all;
   }
