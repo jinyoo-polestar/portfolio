@@ -61,7 +61,6 @@ $(function () {
       scrollTrigger: {
         trigger: document.querySelector(".about"),
         scroller: document.querySelector(".layout"),
-        start: "top top",
         scrub: true,
       },
     }
