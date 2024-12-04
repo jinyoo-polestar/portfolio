@@ -1,55 +1,69 @@
 $(function () {
+  gsap.registerPlugin(ScrollTrigger);
+
+  //intro section folder effect
+  gsap.fromTo(
+    document.querySelector(".intro__bg"),
+    { width: "20%" },
+    {
+      width: "100%",
+      duration: 1,
+      scrollTrigger: {
+        trigger: document.querySelector(".intro"),
+        scroller: document.querySelector(".layout"),
+        endTrigger: document.querySelector(".profile"),
+        toggleActions: "restart none restart none",
+      },
+    }
+  );
+
   //profile section title show effect
   gsap.fromTo(
-    $(".profile__title"),
+    document.querySelector(".profile__title"),
     { x: -100, opacity: 0 },
     {
       x: 0,
       opacity: 1,
       duration: 1,
-      scrollTrigger: $(".profile"),
-      endTrigger: $(".cover"),
+      scrollTrigger: {
+        trigger: document.querySelector(".profile"),
+        scroller: document.querySelector(".layout"),
+        endTrigger: document.querySelector(".cover"),
+        scrub: true,
+      },
     }
   );
 
   //process section title show effect
   gsap.fromTo(
-    $(".process__title"),
+    document.querySelector(".process__title"),
     { x: -100, opacity: 0 },
     {
       x: 0,
       opacity: 1,
       duration: 1,
-      scrollTrigger: $(".process"),
+      scrollTrigger: {
+        trigger: document.querySelector(".process"),
+        scroller: document.querySelector(".layout"),
+        scrub: true,
+      },
     }
   );
 
   //about section title show effect
   gsap.fromTo(
-    $(".about__title"),
+    document.querySelector(".about__title"),
     { x: -100, opacity: 0 },
     {
       x: 0,
       opacity: 1,
       duration: 1,
-      scrollTrigger: $(".about"),
-      start: "top top",
-    }
-  );
-
-  $(".intro__bg").animate(
-    {
-      width: "100%",
-    },
-    {
-      duration: 1000,
-      easing: "swing",
-      step: function (now) {
-        if (now > 0) {
-          $(".intro__bg").css("overflow", "unset");
-        }
+      scrollTrigger: {
+        trigger: document.querySelector(".about"),
+        scroller: document.querySelector(".layout"),
+        start: "top top",
+        scrub: true,
       },
-      complete: function () {},
     }
   );
 
