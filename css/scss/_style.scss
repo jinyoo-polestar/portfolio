@@ -390,6 +390,46 @@
   }
 }
 
+//portfolio
+.portfolio {
+  @extend %section-layout;
+  @include work-item($black, $primary, $white);
+
+  &__btn-content {
+    margin-top: 2.5rem;
+  }
+
+  &__btn {
+    margin-right: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid $white;
+    border-radius: 2rem;
+    background-color: $primary;
+    color: $white;
+
+    &:visited {
+      color: $white;
+    }
+  }
+
+  &__ic-site,
+  &__ic-github {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+    vertical-align: text-top;
+  }
+
+  &__ic-site {
+    background-image: url("/source/icon/ic_website.svg");
+  }
+
+  &__ic-github {
+    background-image: url("/source/icon/ic_github.svg");
+  }
+}
+
 //netflix
 .netflix {
   @extend %section-layout;
@@ -403,7 +443,7 @@
     margin-right: 0.5rem;
     padding: 0.5rem 1rem;
     border: 1px solid $white;
-    border-radius: 1rem;
+    border-radius: 2rem;
     background-color: $black;
     color: $white;
 
