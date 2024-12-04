@@ -29,7 +29,6 @@ $(function () {
         trigger: document.querySelector(".profile"),
         scroller: document.querySelector(".layout"),
         endTrigger: document.querySelector(".cover"),
-        scrub: true,
       },
     }
   );
@@ -45,7 +44,6 @@ $(function () {
       scrollTrigger: {
         trigger: document.querySelector(".process"),
         scroller: document.querySelector(".layout"),
-        scrub: true,
       },
     }
   );
@@ -61,7 +59,6 @@ $(function () {
       scrollTrigger: {
         trigger: document.querySelector(".about"),
         scroller: document.querySelector(".layout"),
-        scrub: true,
       },
     }
   );
