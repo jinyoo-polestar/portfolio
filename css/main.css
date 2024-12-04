@@ -268,7 +268,7 @@ address {
   background-color: #fff;
   box-shadow: 1px 2px 8px rgba(8, 8, 8, 0.168627451);
   cursor: pointer;
-  z-index: 10;
+  z-index: 2;
 }
 
 .profile {
@@ -966,6 +966,45 @@ address {
     width: 30%;
   }
 }
+.detail-page__modal {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 11, 11, 0.631372549);
+  z-index: 3;
+}
+.detail-page__modal-close {
+  position: absolute;
+  top: 2rem;
+  right: 5rem;
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+}
+@media (max-width: 1279px) {
+  .detail-page__modal-close {
+    right: 2rem;
+  }
+}
+.detail-page__modal-content {
+  display: block;
+  width: 40%;
+  height: 90%;
+  margin: 2rem auto 0;
+  overflow-y: scroll;
+  background-color: #fff;
+}
+@media (max-width: 1279px) {
+  .detail-page__modal-content {
+    width: 60%;
+  }
+}
+.detail-page__modal-content img {
+  width: 100%;
+}
 
 .process {
   flex-direction: column;
@@ -1192,9 +1231,15 @@ address {
 
 .footer {
   position: relative;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
   background-color: #f8f9fa;
+}
+.footer__emoji {
+  font-size: 7rem;
+  font-style: normal;
 }
 .footer__text {
   font-size: 2.25rem;

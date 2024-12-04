@@ -175,7 +175,7 @@
     background-color: $white;
     box-shadow: 1px 2px 8px #0808082b;
     cursor: pointer;
-    z-index: 10;
+    z-index: 2;
   }
 }
 
@@ -546,6 +546,47 @@
       width: 30%;
     }
   }
+
+  &__modal {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0f0b0ba1;
+    z-index: 3;
+  }
+
+  &__modal-close {
+    position: absolute;
+    top: 2rem;
+    right: 5rem;
+    font-size: 3rem;
+    color: $white;
+    cursor: pointer;
+
+    @include mobile-tablet {
+      right: 2rem;
+    }
+  }
+
+  &__modal-content {
+    display: block;
+    width: 40%;
+    height: 90%;
+    margin: 2rem auto 0;
+    overflow-y: scroll;
+    background-color: $white;
+
+    @include mobile-tablet {
+      width: 60%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
 }
 
 //process
@@ -783,9 +824,16 @@
 .footer {
   @extend %section-layout;
   position: relative;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
   background-color: $bright-gray;
+
+  &__emoji {
+    font-size: 7rem;
+    font-style: normal;
+  }
 
   &__text {
     font-size: 2.25rem;

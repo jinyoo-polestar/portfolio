@@ -12,15 +12,15 @@ $(function () {
     }
   );
 
-  //about-process section title show effect
+  //process section title show effect
   gsap.fromTo(
-    $(".about-process__title"),
+    $(".process__title"),
     { x: -100, opacity: 0 },
     {
       x: 0,
       opacity: 1,
       duration: 1,
-      scrollTrigger: $(".about-process"),
+      scrollTrigger: $(".process"),
     }
   );
 
@@ -67,5 +67,25 @@ $(function () {
       $(".intro__totop-btn").fadeIn();
       $(".intro__scroll-guide").fadeOut();
     }
+  });
+
+  // image modal click event handler
+  $(".detail-page__img").click(function () {
+    let originalSrc = $(this).attr("src");
+    let newSrc = originalSrc.replace(/\.(\w+)$/, "_full.$1");
+
+    $(".detail-page__modal").show();
+    $(".detail-page__modal-content").append(
+      `<img src="${newSrc}" alt="상세페이지 이미지" />`
+    );
+  });
+
+  // modal close event handler
+  $(".detail-page__modal").click(function () {
+    $(this).hide();
+  });
+
+  $(".detail-page__modal-content").click(function (e) {
+    e.stopPropagation();
   });
 });
