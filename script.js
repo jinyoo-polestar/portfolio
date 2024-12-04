@@ -53,8 +53,19 @@ $(function () {
     }
   );
 
+  // totop button click event handler
   $(".intro__totop-btn").click(function () {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    $(".layout").scrollTop(0);
+  });
+
+  // scroll event handler (show/hide totop-btn & scroll-guide)
+  $(".layout").on("scroll", function () {
+    if ($(".layout").scrollTop() < window.innerHeight) {
+      $(".intro__totop-btn").fadeOut();
+      $(".intro__scroll-guide").fadeIn();
+    } else {
+      $(".intro__totop-btn").fadeIn();
+      $(".intro__scroll-guide").fadeOut();
+    }
   });
 });

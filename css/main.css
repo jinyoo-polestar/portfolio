@@ -140,6 +140,7 @@ address {
   height: 100vh;
   overflow: hidden auto;
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 .intro {
@@ -235,10 +236,21 @@ address {
     font-size: 2rem;
   }
 }
+@keyframes move-effect {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .intro__scroll-guide {
   position: absolute;
   bottom: 3rem;
-  opacity: 0.5;
+  animation: move-effect 3s ease infinite;
 }
 @media (max-width: 1279px) {
   .intro__scroll-guide {
@@ -246,6 +258,7 @@ address {
   }
 }
 .intro__totop-btn {
+  display: none;
   position: fixed;
   bottom: 1.5rem;
   right: 3rem;
